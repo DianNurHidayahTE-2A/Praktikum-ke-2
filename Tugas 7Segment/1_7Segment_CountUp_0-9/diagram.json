@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "author": "Dian Nur Hidayah",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 163.8, "left": -231, "attrs": {} },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg1",
+      "top": -23.82,
+      "left": 62.68,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -111.25,
+      "left": 28.8,
+      "attrs": { "value": "100" }
+    }
+  ],
+  "connections": [
+    [ "sevseg1:A", "uno:1", "gold", [ "v-47.16", "h67.2", "v182.4", "h-153.6" ] ],
+    [ "sevseg1:B", "uno:2", "green", [ "v-37.56", "h48", "v163.2", "h-144" ] ],
+    [ "sevseg1:C", "uno:3", "magenta", [ "v48", "h-96" ] ],
+    [ "sevseg1:D", "uno:4", "cyan", [ "v38.4", "h-19.2" ] ],
+    [ "sevseg1:E", "uno:5", "gray", [ "v28.8", "h-96" ] ],
+    [ "sevseg1:F", "uno:6", "blue", [ "v-47.16", "h-9.6" ] ],
+    [ "sevseg1:G", "uno:7", "#8f4814", [ "v-37.56", "h-115.2" ] ],
+    [ "sevseg1:COM.2", "r1:2", "red", [ "h0" ] ],
+    [ "r1:2", "sevseg1:COM.1", "red", [ "h86.4", "v162", "h-86.4" ] ],
+    [ "uno:GND.1", "r1:1", "black", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
